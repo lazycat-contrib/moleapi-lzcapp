@@ -47,13 +47,16 @@ stores:
       source: https://github.com/ca-x/moleapi
       source_author: ca-x
       support_pc: true
+      support_mobile: true
       screenshot_pc_files:
         - .github/screenshots/pc-1-http.png
         - .github/screenshots/pc-2-code.png
         - .github/screenshots/pc-3-environments.png
-      screenshot_phone_files:
+      screenshot_mobile_files:
         - .github/screenshots/mobile-1-http.png
         - .github/screenshots/mobile-2-code.png
+        - .github/screenshots/mobile-3-docs.png
+        - .github/screenshots/mobile-4-environments.png
   private:
     enabled: true
     skip_if_version_exists: true
