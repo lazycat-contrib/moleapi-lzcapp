@@ -26,13 +26,36 @@ images:
     sort: semver
     tag_regex: '^\d+\.\d+\.\d+$'
     delivery:
+      # 官方商店要求镜像来自懒猫镜像源：由 Action 用 LZC_API_TOKEN 转存并改写 manifest
       mode: lazycat
 
 stores:
   official:
     enabled: true
+    skip_if_version_exists: true
+    create_if_missing: true
+    changelog_locales: [zh, en]
+    application:
+      language: zh
+      name: MoleAPI
+      brief: 自托管 API 工作台：请求调试、脚本数据集与 OAuth 调试，配套离线桌面客户端
+      description: |
+        MoleAPI 是一个自托管的 API 调试工作台。网页端覆盖 HTTP 请求编排、脚本数据集桥接、
+        OAuth1/OAuth2 调试、环境与作用域变量、Markdown 文档等能力；同时提供离线 Tauri 桌面
+        客户端，可与自建服务共用数据。所有数据保存在你自己的懒猫微服里。
+      keywords: API,调试,HTTP,OAuth,工作台
+      source: https://github.com/ca-x/moleapi
+      source_author: ca-x
+      support_pc: true
+      screenshot_pc_files:
+        - .github/screenshots/pc-1-http.png
+        - .github/screenshots/pc-2-code.png
+        - .github/screenshots/pc-3-environments.png
+      screenshot_phone_files:
+        - .github/screenshots/mobile-1-http.png
+        - .github/screenshots/mobile-2-code.png
   private:
     enabled: true
     skip_if_version_exists: true
     name: MoleAPI
-    summary: "自托管 API 工作台"
+    summary: "MoleAPI 懒猫微服打包：自托管 API 工作台（HTTP 调试 / OAuth / 脚本数据集）。"
