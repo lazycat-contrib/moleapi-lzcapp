@@ -11,6 +11,7 @@ services:
   moleapi:
     # upstream: ghcr.io/ca-x/moleapi:0.2.1
     image: registry.lazycat.cloud/czyt/ca-x/moleapi:bf3cbddd6787fbc8
+    user: root
     environment:
       - TZ=Asia/Shanghai
       - MOLEAPI_BIND=0.0.0.0:8787
