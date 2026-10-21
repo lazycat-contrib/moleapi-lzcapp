@@ -1,0 +1,15 @@
+package: community.lazycat.app.moleapi
+version: 0.2.1
+name: MoleAPI
+description: "MoleAPI: self-hostable API workbench with an offline Tauri desktop client"
+min_os_version: 1.5.0
+author: ca-x
+license: MIT
+homepage: https://github.com/ca-x/moleapi
+locales:
+  zh:
+    name: "MoleAPI"
+    description: "自托管 API 工作台：请求调试、脚本数据集、OAuth 调试，支持离线 Tauri 桌面客户端"
+  en:
+    name: "MoleAPI"
+    description: "Self-hostable API workbench with an offline Tauri desktop client"

@@ -1,0 +1,22 @@
+params:
+  - id: allow_registration
+    type: bool
+    name: "Open Registration"
+    description: "Allow self-service registration after the first account (setup token) is created. Default off"
+    default_value: "false"
+    optional: true
+  - id: allow_private_network
+    type: bool
+    name: "Allow Private Network Debug"
+    description: "Allow requests to private-network endpoints from the web client (for intranet API debugging). Default off"
+    default_value: "false"
+    optional: true
+
+locales:
+  zh:
+    allow_registration:
+      name: "开放注册"
+      description: "首个账号（setup token）创建后是否允许自助注册。默认关闭"
+    allow_private_network:
+      name: "允许内网调试"
+      description: "允许 Web 客户端请求内网地址（用于调试内网 API）。默认关闭"
