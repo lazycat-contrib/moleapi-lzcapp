@@ -7,11 +7,10 @@ application:
   upstreams:
     - location: /
       backend: http://moleapi:8787/
-
 services:
   moleapi:
     # upstream: ghcr.io/ca-x/moleapi:0.2.1
-    image: ghcr.nju.edu.cn/ca-x/moleapi:0.2.1@sha256:98508d45887f545eb79098d1b3e8bb6d5cbfa6133e49131553ed83ab1c9dd02f
+    image: registry.lazycat.cloud/czyt/ca-x/moleapi:bf3cbddd6787fbc8
     environment:
       - TZ=Asia/Shanghai
       - MOLEAPI_BIND=0.0.0.0:8787
