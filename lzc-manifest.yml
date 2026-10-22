@@ -9,8 +9,8 @@ application:
       backend: http://moleapi:8787/
 services:
   moleapi:
-    # upstream: ghcr.io/ca-x/moleapi:0.2.1
-    image: registry.lazycat.cloud/czyt/ca-x/moleapi:bf3cbddd6787fbc8
+    # upstream: ghcr.io/ca-x/moleapi:0.2.2
+    image: registry.lazycat.cloud/czyt/ca-x/moleapi:07a6790102b11970
     user: root
     environment:
       - TZ=Asia/Shanghai
