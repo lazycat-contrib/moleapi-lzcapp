@@ -7,11 +7,6 @@ application:
   upstreams:
     - location: /
       backend: http://moleapi:8787/
-      # The runtime image is debian:bookworm-slim with only
-      # ca-certificates/libstdc++6/zlib1g installed, so neither curl nor wget
-      # exists inside the container and any HTTP probe would always fail.
-      # Disable the automatic upstream health check for this entry.
-      disable_auto_health_chekcing: true
 services:
   moleapi:
     # upstream: ghcr.io/ca-x/moleapi:0.2.2
@@ -27,3 +22,8 @@ services:
       - MOLEAPI_ALLOW_PRIVATE_NETWORK={{ .U.allow_private_network }}
     binds:
       - /lzcapp/var/moleapi:/data
+    # The runtime image is debian:bookworm-slim with only ca-certificates,
+    # libstdc++6 and zlib1g installed, so neither curl nor wget exists inside
+    # the container and any HTTP probe would always fail.
+    healthcheck:
+      disable: true
