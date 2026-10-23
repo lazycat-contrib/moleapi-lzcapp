@@ -22,13 +22,7 @@ services:
       - MOLEAPI_ALLOW_PRIVATE_NETWORK={{ .U.allow_private_network }}
     binds:
       - /lzcapp/var/moleapi:/data
-    healthcheck:
-      test:
-        - CMD
-        - curl
-        - -sf
-        - http://127.0.0.1:8787/
-      interval: 30s
-      timeout: 5s
-      retries: 3
-      start_period: 15s
+    # No healthcheck: the runtime image is debian:bookworm-slim with only
+    # ca-certificates/libstdc++6/zlib1g installed, so neither curl nor wget
+    # exists and any HTTP probe would always fail. The system monitors the
+    # declared upstream port (8787) instead.
