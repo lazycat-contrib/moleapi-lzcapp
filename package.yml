@@ -1,5 +1,5 @@
 package: community.lazycat.app.moleapi
-version: 0.2.3
+version: 0.2.2
 name: MoleAPI
 description: "MoleAPI: self-hostable API workbench with an offline Tauri desktop client"
 min_os_version: 1.5.0
